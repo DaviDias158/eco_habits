@@ -44,7 +44,7 @@
     <div class="mt-4 flex justify-between items-center">
       <h1 class="flex items-center text-sm font-bold uppercase tracking-wider text-green-600">
         Plataforma EcoHabits
-        <small class="badge badge-success badge-sm ml-3 text-white">🎒 Projeto Funcional</small>
+        <small class="badge badge-success badge-sm ml-3 text-white">Projeto de PF</small>
       </h1>
       <Layouts.theme_toggle />
     </div>
@@ -64,27 +64,24 @@
             navigate={~p"/habits"}
             class="flex flex-col items-center justify-center p-6 bg-white border border-zinc-200 rounded-xl shadow-sm hover:border-green-500 hover:shadow-md transition text-center group"
           >
-            <span class="text-2xl mb-2">🌿</span>
             <span class="font-bold text-sm text-zinc-900 group-hover:text-green-600">Gestão de Hábitos</span>
-            <span class="text-xs text-zinc-400 mt-1">Módulo B</span>
+            <span class="text-xs text-zinc-400 mt-1">Crie Novos hábitos agora mesmo!</span>
           </.link>
 
           <.link
             navigate={~p"/tracker"}
             class="flex flex-col items-center justify-center p-6 bg-white border border-zinc-200 rounded-xl shadow-sm hover:border-green-500 hover:shadow-md transition text-center group"
           >
-            <span class="text-2xl mb-2">⚡</span>
-            <span class="font-bold text-sm text-zinc-900 group-hover:text-green-600">Tracker & Feed PubSub</span>
-            <span class="text-xs text-zinc-400 mt-1">Módulo C</span>
+            <span class="font-bold text-sm text-zinc-900 group-hover:text-blue-600">Tracker & Feed PubSub</span>
+            <span class="text-xs text-zinc-400 mt-1">Adicione hábitos que você fez hoje e ganhe pontos!</span>
           </.link>
 
           <.link
             navigate={~p"/profile"}
             class="flex flex-col items-center justify-center p-6 bg-white border border-zinc-200 rounded-xl shadow-sm hover:border-green-500 hover:shadow-md transition text-center group"
           >
-            <span class="text-2xl mb-2">👤</span>
-            <span class="font-bold text-sm text-zinc-900 group-hover:text-green-600">Meu Perfil</span>
-            <span class="text-xs text-zinc-400 mt-1">Módulo A</span>
+            <span class="font-bold text-sm text-zinc-900 group-hover:text-pink-600">Meu Perfil</span>
+            <span class="text-xs text-zinc-400 mt-1">Adicione uma biografia ou edite seu nome!</span>
           </.link>
         </div>
       <% else %>
