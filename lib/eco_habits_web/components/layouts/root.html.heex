@@ -29,23 +29,33 @@
     </script>
   </head>
   <body>
-    <ul class="menu menu-horizontal w-full relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
+    <ul class="menu menu-horizontal w-full relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end font-medium text-sm">
       <%= if @current_scope do %>
         <li>
+          <.link href={~p"/habits"} class="text-green-600 hover:text-green-700 font-bold">Hábitos</.link>
+        </li>
+        <li>
+          <.link href={~p"/tracker"} class="text-blue-600 hover:text-green-700 font-bold">Tracker & Feed</.link>
+        </li>
+        <li>
+          <.link href={~p"/profile"} class="text-cyan-600 hover:text-green-700 font-bold">Meu Perfil</.link>
+        </li>
+        <span class="text-zinc-300">|</span>
+        <li class="text-zinc-500 italic">
           {@current_scope.user.email}
         </li>
         <li>
-          <.link href={~p"/users/settings"}>Settings</.link>
+          <.link href={~p"/users/settings"} class="hover:text-zinc-900">Configurações</.link>
         </li>
         <li>
-          <.link href={~p"/users/log-out"} method="delete">Log out</.link>
+          <.link href={~p"/users/log-out"} method="delete" class="text-red-600 hover:text-red-700">Sair</.link>
         </li>
       <% else %>
         <li>
-          <.link href={~p"/users/register"}>Register</.link>
+          <.link href={~p"/users/register"} class="hover:text-zinc-900">Registrar</.link>
         </li>
         <li>
-          <.link href={~p"/users/log-in"}>Log in</.link>
+          <.link href={~p"/users/log-in"} class="bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 transition">Entrar</.link>
         </li>
       <% end %>
     </ul>
