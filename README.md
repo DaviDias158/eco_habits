@@ -41,7 +41,7 @@ Agora, abra o seu navegador e acesse as rotas do sistema:
 
 * **Página Inicial / Entrada:** `http://localhost:4000`
 * **Cadastro de Usuário (Módulo A):** `http://localhost:4000/users/register`
-* **Login no Sistema (Módulo A):** `http://localhost:4000/users/log_in`
+* **Login no Sistema (Módulo A):** `http://localhost:4000/users/log-in`
 * **Página de Perfil e Bio (Módulo A):** `http://localhost:4000/users/profile`
 * **Gestão e Filtro de Hábitos (Módulo B):** `http://localhost:4000/habits`
 * **Super Tela do Tracker e Feed (Módulo C):** `http://localhost:4000/tracker`
