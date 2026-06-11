@@ -76,13 +76,13 @@ defmodule EcoHabitsWeb.HabitLive.Index do
           </div>
 
           <div class="bg-white rounded-xl border border-zinc-200 shadow-sm overflow-hidden">
-            <table class="w-full text-left border-collapse">
+            <table class="w-full text-left border-collapse table-fixed">
               <thead>
                 <tr class="bg-zinc-50 border-b border-zinc-200 text-zinc-400 text-xs font-bold uppercase tracking-wider">
-                  <th class="p-4">Hábito</th>
-                  <th class="p-4">Categoria</th>
-                  <th class="p-4 text-center">Pontos</th>
-                  <th class="p-4 text-right">Ações</th>
+                  <th class="p-4 w-5/12">Hábito</th>
+                  <th class="p-4 w-3/12">Categoria</th>
+                  <th class="p-4 w-1/12 text-center">Pontos</th>
+                  <th class="p-4 w-3/12 text-right">Ações</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-zinc-100 text-zinc-700">
@@ -94,16 +94,16 @@ defmodule EcoHabitsWeb.HabitLive.Index do
                 <%= for habit <- @habits do %>
                   <tr class="hover:bg-zinc-50 transition-colors">
                     <td class="p-4">
-                      <span class="font-semibold text-zinc-900 block"><%= habit.name %></span>
-                      <span class="text-sm text-zinc-500 block max-w-md truncate"><%= habit.description %></span>
+                      <span class="font-semibold text-zinc-900 block truncate" title={habit.name}><%= habit.name %></span>
+                      <span class="text-sm text-zinc-500 block truncate" title={habit.description}><%= habit.description %></span>
                     </td>
                     <td class="p-4">
-                      <span class="px-2 py-1 text-xs font-bold uppercase rounded bg-zinc-100 text-zinc-600">
+                      <span class="px-2 py-1 text-xs font-bold uppercase rounded bg-zinc-100 text-zinc-600 inline-block w-full truncate text-center" title={habit.category}>
                         <%= habit.category %>
                       </span>
                     </td>
                     <td class="p-4 text-center font-black text-green-600">+<%= habit.points %></td>
-                    <td class="p-4 text-right space-x-2">
+                    <td class="p-4 text-right space-x-2 whitespace-nowrap">
                       <%= if habit.user_id == @current_user_id do %>
                         <button phx-click="edit" phx-value-id={habit.id} class="text-sm font-semibold text-brand hover:underline cursor-pointer">
                           Editar
@@ -111,7 +111,7 @@ defmodule EcoHabitsWeb.HabitLive.Index do
                         <button phx-click="delete" phx-value-id={habit.id} data-confirm="Deseja mesmo excluir este hábito?" class="text-sm font-semibold text-red-600 hover:underline cursor-pointer">
                           Excluir
                         </button>
-                      <% else %>
+                          <% else %>
                         <span class="text-xs text-zinc-400 italic">Criado por outro usuário</span>
                       <% end %>
                     </td>
