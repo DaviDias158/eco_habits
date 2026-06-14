@@ -311,7 +311,7 @@ defmodule EcoHabits.Accounts do
     new_points = (user.total_points || 0) + points
 
     user
-    |> User.profile_changeset(%{total_points: new_points})
+    |> Ecto.Changeset.change(total_points: new_points)
     |> Repo.update()
   end
 end
